@@ -1,20 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 body {
-    background-color: black;
+    background-color: white;
     width: 95%;
     margin: auto;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
 }
 
 .header {
-    background: url('素材/starfield-banner.jpg ');
     position: fixed;
-    width: 95%;
-}
-
-.header .logo-link {
-    padding: 10px;
+    height: 136px;
+    background: url("./images/starfield-banner.jpg");
+    height: 136px;
+    z-index: 5;
 }
 
 .header .logo {
-    width:110px;
-    margin:11px;
+    width: 10rem;
+    margin: 11px;
+}
+
+.header .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.header .nav {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 0 0 4.5px 40px;
+    color: #fff;
+}
+
+.header .main-nav {
+    margin: 16px 0 0 240px;
+    height: 40px;
+}
+
+.main-nav li {
+    padding: 0 16px;
+    border-right: 2px solid rgb(192, 190, 190);
+    font-size: 18px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.nav li:last-child {
+    border: transparent;
+}
+
+.search {
+    position: relative;
+    height: 40px;
+    margin: 19px 0 0 4.8px;
+}
+
+.search input {
+    width: 100px;
+    height: 24px;
+    background-color: rgba(165, 164, 164, 0.6);
+    border: 0;
+    color: rgba(19, 18, 18, 0.5);
+}
+
+.search .search-icon {
+    position: absolute;
+    top: 2.4px;
+    right: 1.6px;
+    width: 19px;
+    height: 19px;
+}
+
+.nav .share {
+    width: 32px;
+    height: 32px;
+    margin: 18px;
+}
+
+.sub-nav {
+    background-color: rgb(107, 107, 107);
+    margin-left: 112px;
+    height: 40px;
+}
+
+.sub-nav li {
+    margin: auto 0;
+    padding: 0 13px;
+    border-right: .125rem solid rgb(192, 190, 190);
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.container {
+    margin-top: 136px;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: 100%
+}
+
+.container .dawn {
+    position: relative;
+    margin: 10px;
+    width: 50%;
+    display: inline-block;
+}
+
+.title {
+    background-color: #45709a;
+    color: #fff;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    left: 0rem;
+    bottom: 32px;
+    padding: 0 8px;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 32px;
+    background-color: #d2d2d2cc;
+    font-weight: bold;
+}
+
+.description p {
+    padding-left: 6.5px;
+}
+
+.dawn .dawn-title { 
+    width: 80px;
+}
+
+.container-right {
+    width: 50%;
+    flex-wrap: wrap;
+}
+
+.container-right .climate {
+    position: relative;
+    width: 48%;
+    height: 47%;
+    margin: 10px;
+}
+
+.container-right .climate-title {
+    bottom: 64px;
+}
+
+.container-right .nasa-event {
+    position: relative;
+    width: 46%;
+    height: 47%;
+    background-color: #45709a;
+    margin: 10px;
+    color: #fff;
+}
+
+.nasa-event > p {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 13px;
+}
+
+.nasa-event h2 {
+    margin: 0 auto 5px;
+    width: 90%;
+    border-bottom: 2px solid #fff;
+}
+
+.event-footer {
+    position: absolute;
+    bottom: 5px;
+    width: 90%;
+    left:50%;
+    transform:translate(-50%, 0);
+    font-size: 11px;
+    border-top: 2px solid #fff;
+    justify-content: space-between;
+}
+
+.third-row .title {
+    bottom: 64px;
+}
+
+.apollo {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+}
+
+.stars {
+    position: relative;
+    width: 24%;
+    margin: 10px;
+}
+
+.asteroids {
+    position: relative;
+    width: 48%;
+    margin: 10px;
+}
+
+.video {
+    width: 24%;
+}
+
+.third-row > div {
+    position: relative;
+    width: 24%;
+    margin: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .stories {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: #1d4288;
+    text-align: center;
+}
+
+.footer .logo-info {
+    margin: 20px;
+    height: 50px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+
+.footer-nav {
+    margin-bottom: 50px;
+    width: 62%;
+    align-self: flex-end;
+    color: #1d4288;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.footer-nav li {
+    padding-right: 20px;
 }
